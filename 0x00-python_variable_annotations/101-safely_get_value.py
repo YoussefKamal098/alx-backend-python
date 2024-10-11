@@ -13,7 +13,7 @@ from typing import TypeVar, Mapping, Any, Union
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping[Any, Any], key: Any,
+def safely_get_value(dct: Mapping, key: Any,
                      default: Union[T, None] = None) -> Union[Any, T]:
     """
     Safely retrieves a value from a dictionary-like mapping,
@@ -40,3 +40,10 @@ def safely_get_value(dct: Mapping[Any, Any], key: Any,
         return dct[key]
     else:
         return default
+
+
+annotations = safely_get_value.__annotations__
+
+print("Here's what the mappings should look like")
+for k, v in annotations.items():
+    print( ("{}: {}".format(k, v)))
