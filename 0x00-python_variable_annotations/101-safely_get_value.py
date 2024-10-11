@@ -26,7 +26,7 @@ def safely_get_value(dct: Mapping, key: Any,
     or `None` if no default is specified.
 
     Args:
-        dct (Mapping[Any, Any]): The mapping (dictionary-like object)
+        dct (Mapping): The mapping (dictionary-like object)
         to search for the key.
         key (Any): The key to search for in the mapping.
         default (Union[T, None], optional): The value to return if the

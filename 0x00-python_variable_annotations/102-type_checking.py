@@ -14,17 +14,17 @@ def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Repeats each element of a tuple a specified number of times.
 
-    This function takes a tuple of integers and
+    This function takes a tuple of elements and
     repeats each element by the specified `factor`.
     The result is a list with each element repeated consecutively.
 
     Args:
-        lst (Tuple[int, ...]): A tuple of integers to be zoomed in on.
+        lst (Tuple): A tuple of elements to be zoomed in on.
         factor (int, optional): The number of times each element
         should be repeated. Defaults to 2.
 
     Returns:
-        List[int]: A list containing the repeated elements of the tuple.
+        List: A list containing the repeated elements of the tuple.
     """
     zoomed_in: List[int] = [
         item for item in lst
